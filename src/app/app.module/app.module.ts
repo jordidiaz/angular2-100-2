@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { FeatureModule } from '../feature.module/feature.module';
+import { OtherFeatureModule } from '../other.feature.module/other.feature.module';
 
 import { AppComponent } from './app.component';
 
@@ -15,7 +16,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FeatureModule
+    FeatureModule,
+    OtherFeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]
