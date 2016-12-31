@@ -8,7 +8,9 @@ import { MyService } from './service';
 })
 export class MyComponent {
 
-  title = 'Hello World!';
+  title = null;
 
-  constructor(service: MyService) { }
+  constructor(service: MyService) {
+    this.title = service.getGreeting();
+  }
 }
