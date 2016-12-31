@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 import { MyService } from './service';
-import { OtherFeatureModuleService } from '../other.feature.module/other.feature.module.service';
 
 @Component({
   selector: 'app-component',
-  template: '<h1>{{title | mypipe}}</h1>'
+  template: '<h1>{{title | sharedpipe}}</h1>'
 })
 export class MyComponent {
 
   title = null;
 
-  constructor(service: MyService, otherService: OtherFeatureModuleService) {
+  constructor(service: MyService) {
     this.title = service.getGreeting();
   }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+
+import { SharedModule } from '../shared.module/shared.module';
 
 import { MyComponent } from './component';
 import { MyPipe } from './pipe';
@@ -8,7 +8,7 @@ import { MyService } from './service';
 
 @NgModule({
   declarations: [MyComponent, MyPipe],
-  imports: [FormsModule, RouterModule],
+  imports: [SharedModule],
   exports: [MyComponent],
   providers: [MyService]
 })

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 
 import { OtherFeatureModuleService } from './other.feature.module.service';
+import { SharedModule} from '../shared.module/shared.module';
 
 @NgModule({
-  imports: [],
+  imports: [SharedModule],
   exports: [],
   declarations: [],
   providers: [OtherFeatureModuleService]
