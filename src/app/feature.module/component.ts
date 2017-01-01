@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MyService } from './service';
+import { CacheService } from './cache.service';
 
 @Component({
-  selector: 'app-component',
-  template: '<h1>{{title | sharedpipe}}</h1>'
+  selector: 'app-cacheable-component',
+  templateUrl: './template.html'
 })
 export class MyComponent {
 
-  title = null;
+  value = null;
 
-  constructor(service: MyService) {
-    this.title = service.getGreeting();
+  constructor(private service: CacheService) {}
+
+  public setCache() {
+    this.service.setValue(this.value);
+  }
+
+  public getFromCache() {
+    this.value = this.service.getValue();
   }
 }
