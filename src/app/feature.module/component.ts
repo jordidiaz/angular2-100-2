@@ -4,7 +4,8 @@ import { CacheService } from './cache.service';
 
 @Component({
   selector: 'app-cacheable-component',
-  templateUrl: './template.html'
+  templateUrl: './template.html',
+  providers: [CacheService]
 })
 export class MyComponent {
 
