@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CacheService } from './cache.service';
+import { LoggerService } from '../core.module/logger.service';
 
 @Component({
   selector: 'app-cacheable-component',
@@ -11,7 +12,7 @@ export class MyComponent {
 
   value = null;
 
-  constructor(private service: CacheService) {}
+  constructor(private service: CacheService, private logger: LoggerService) {}
 
   public setCache() {
     this.service.setValue(this.value);

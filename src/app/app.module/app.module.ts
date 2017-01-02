@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { FeatureModule } from '../feature.module/feature.module';
 import { OtherFeatureModule } from '../other.feature.module/other.feature.module';
+import { CoreModule } from '../core.module/core.module';
+
+import { LoggerLevel } from '../core.module/logger.level';
 
 import { AppComponent } from './app.component';
 
@@ -13,7 +16,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FeatureModule,
-    OtherFeatureModule
+    OtherFeatureModule,
+    CoreModule.forRoot({level: LoggerLevel.Warning, verbose: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
